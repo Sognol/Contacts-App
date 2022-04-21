@@ -5,9 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Static Content -->
-  <link rel="stylesheet" href="static/css/index.css">
-
   <!-- Bootstrap -->
   <link 
     rel="stylesheet" 
@@ -23,6 +20,13 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous">
   </script>
+
+  <!-- Static Content -->
+  <link rel="stylesheet" href="static/css/index.css">
+  <?php $uri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH); ?>
+  <?php if($uri == "contacts-app/" || $uri == "/contacts-app/index.php"): ?>
+    <script defer src="./static/js/welcome.js"></script>
+  <?php endif ?>
 
   <title>Contacts App</title>
 </head>
