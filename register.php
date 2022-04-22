@@ -1,6 +1,9 @@
   <?php
   require "db.php";
 
+  session_start();
+
+
   $error = null;
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
